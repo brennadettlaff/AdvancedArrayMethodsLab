@@ -118,7 +118,7 @@ function filterExample(){
     //Debug tip: Use a console.log(el) inside the filter function to get a visualization of what el represents and see all its properties! This helps you to know what you can access with dot notation inside the filter. Do this every time you use a .filter or else you are working in the dark!
     let results;
     results = dishes.filter(function(el){
-        console.log("el inside filterExample's filter: ", el)
+        // console.log("el inside filterExample's filter: ", el)
         if(el.cuisine === "Mexican"){
             return true;
         }
@@ -141,9 +141,16 @@ console.log('mexicanFood from filterExample', mexicanFood)
 function problemOne(){
 
     let results;
+    results = dishes.filter(function(element){
+        if(element.cuisine === "Vegetarian"){return true;}
+        else{return false;}
+    })
 
     return results;
 }
+
+let vegetarianFood = problemOne();
+console.log("Vegetarian Food", vegetarianFood)
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
