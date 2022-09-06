@@ -225,22 +225,35 @@ console.log('mexicanFood from filterExample', mexicanFood)
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
-function problemSix(){
+// function problemSix(){
+
+//     let results;
+//     results = dishes.filter(function(element){
+//         if(element.ingredients.includes("chickpea")){return true;}
+//         else{return false;}
+//     })
+//     return results;
+// }
+
+// let chickpeaFoods = problemSix();
+// console.log("Foods with chickpeas", chickpeaFoods)
+
+//7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
+//Filter
+
+function problemSeven(){
 
     let results;
     results = dishes.filter(function(element){
-        if(element.ingredients.includes("chickpea")){return true;}
+        if(element.ingredients.includes(chooseIngredient)){return true;}
         else{return false;}
     })
     return results;
 }
 
-let chickpeaFoods = problemSix();
-console.log("Foods with chickpeas", chickpeaFoods)
-
-//7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
-//Filter
-
+let chooseIngredient = prompt("What ingredient would you like to sort by?")
+let chickpeaFoods = problemSeven();
+console.log(`Foods with ${chooseIngredient}`, chickpeaFoods)
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
