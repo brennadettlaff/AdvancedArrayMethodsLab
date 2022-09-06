@@ -241,25 +241,33 @@ console.log('mexicanFood from filterExample', mexicanFood)
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
 
-function problemSeven(){
+// function problemSeven(){
 
-    let results;
-    results = dishes.filter(function(element){
-        if(element.ingredients.includes(chooseIngredient)){return true;}
-        else{return false;}
-    })
-    return results;
-}
+//     let results;
+//     results = dishes.filter(function(element){
+//         if(element.ingredients.includes(chooseIngredient)){return true;}
+//         else{return false;}
+//     })
+//     return results;
+// }
 
-let chooseIngredient = prompt("What ingredient would you like to sort by?")
-let chickpeaFoods = problemSeven();
-console.log(`Foods with ${chooseIngredient}`, chickpeaFoods)
+// let chooseIngredient = prompt("What ingredient would you like to sort by?")
+// let chickpeaFoods = problemSeven();
+// console.log(`Foods with ${chooseIngredient}`, chickpeaFoods)
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
+function problemEight(){
 
+    let results;
+    results = dishes.map(function(element){return element.cuisine})
+    return results
+}
+
+let cuisineTypes = problemEight()
+console.log("Cuisine Types", cuisineTypes)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
