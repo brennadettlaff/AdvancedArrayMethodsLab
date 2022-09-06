@@ -207,7 +207,18 @@ console.log("Matching Foods", matchingFoods)
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
 
+function problemFive(){
 
+    let results;
+    results = dishes.filter(function(element){
+        if(element.servings % 2 == 0){return true;}
+        else{return false;}
+    })
+    return results;
+}
+
+let evenFoods = problemFive();
+console.log("Even Foods", evenFoods)
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
